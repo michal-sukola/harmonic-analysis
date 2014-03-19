@@ -1,0 +1,122 @@
+ // Open midi file
+midiFile = Sibelius.SelectFileToOpen("Chord MIDI file", "*.*");
+Sibelius.Open(midiFile);
+
+if(midiFile = null) {
+  return True;
+}
+
+// Open chord file
+chordFile = Sibelius.SelectFileToOpen("Chord ANALYSIS file", "*.*");
+
+if(chordFile = null) {
+  return True;
+}
+
+// Process chord file
+lines = Sibelius.ReadTextFile(chordFile);
+
+// Set bar to first
+barId = 0;
+score = Sibelius.ActiveScore;              // put it in a variable
+staff = score.NthStaff(1);                 // get top staff
+
+oldBarId = 0;
+oldBeatsProcessed = 0.0;
+oldMark = "BLA";
+
+for each l in lines {
+	//barBeatCount = bar.Length / 256;
+	bits = null;
+   bits2 = null;
+	bits = SplitString(l,":");
+
+	// which bar are we in
+   barId = bits[0];
+	// Get current bar
+	bar = staff.NthBar(barId);
+	
+	// how many beats we processed  
+   beatsProcessed = bits[1];
+
+   bits2 = SplitString(bits[2], " ");
+   chordTone = bits2[1];
+   chordType = bits2[2];
+
+   scaleTone = bits2[3];
+   scaleType = bits2[4];
+
+   //scaleTone = "G";
+   //scaleType = "DUR_MOL";
+   
+	mark = "";
+
+	switch(chordTone) {
+		case ("null") { mark = "0"; }
+		case ("*OPEN_WITH_4") { mark = "o4"; }
+  		case ("*OPEN_WITH_7") { mark = "o7"; }
+  		case ("*OPEN_WITH_3") { mark = "o3"; }
+		default {
+			mark = chordTone;
+		}
+
+	}
+
+	typeShort = "";
+	switch(chordType) {
+		case ("MAJOR_TRIAD") { typeShort = "+"; } 
+		case ("MINOR_TRIAD") { typeShort = "-"; }
+		case ("AUGMENTED_TRIAD") { typeShort = "++"; }
+		case ("DIMINISHED_TRIAD") { typeShort = "--"; }
+		case ("DOMINANT_SEVENTH") { typeShort = "D7"; }	
+		case ("DIMINISHED_SEVENTH") { typeShort = "Dim7"; }
+		case ("DIMINISHED_MINOR_SEVENTH") { typeShort = "Dm7"; }
+		case ("MAJOR_SEVENTH") { typeShort = "Maj+7"; }
+		case ("MINOR_SEVENTH") { typeShort = "Min-7"; }
+		case ("AUGMENTED_SEVENTH") { typeShort = "Aug+7"; }
+		case ("MINOR_MAJOR_SEVENTH") { typeShort = "Min+7"; }
+		case ("DOMINANT_SEVENTH_INCOMPLETE") { typeShort = "D7i"; }
+	}
+	
+	mark = mark & typeShort;
+
+	// trace(barId & "|" & beatsProcessed & " | " & mark & typeShort);
+	
+	mark = mark & "\n";
+	if(scaleType = "DUR") {
+		mark = mark & scaleTone;
+	} else {
+		 if(scaleType = "MOL") {
+			mark = mark & utils.LowerCase(scaleTone); 
+		 } else {
+			if(scaleType = "DUR_MOL") {
+				mark = mark & scaleTone & utils.LowerCase(scaleTone); 
+			}
+		 }
+	}
+
+	sys = score.SystemStaff; // system staff is a variable
+    
+   if(not(barId = oldBarId)) {
+     //Sibelius.MessageBox("barID=" & barId & ", oldBarId=" & oldBarId);
+     oldBarId = barId - 1;
+     oldBarId = oldBarId + 1;
+     oldBeatsProcessed = 0.0;
+   } 
+
+   //trace(barId & "|" & oldBarId & "|" & oldBeatsProcessed & "|" & beatsProcessed);   
+       
+   position = oldBeatsProcessed;
+   
+   //Sibelius.MessageBox("oldBeatsProcessed=" & oldBeatsProcessed);
+
+   oldBeatsProcessed = beatsProcessed + 1 - 1;
+
+   text = mark;
+   if(oldMark = mark) {
+     text = "=";
+   }
+	bar.AddText(Quarter * position, text ,"Lyrics (chorus)",2);
+
+   oldMark = mark;
+}
