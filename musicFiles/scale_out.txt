@@ -1,0 +1,1163 @@
+Step1: First beat is the start of first section
+Step2: Fill in the key signature or press enter if unknown:
+0: No Flats or sharps - C+/A-
+1: 1 Sharp - G+/E-
+2: 2 Sharps - D+/B-
+3: 3 Sharps - A+/FIS-
+4: 4 Sharps - E+/CIS-
+5: 5 Sharps or 7 Flats - B+/GIS-
+6: 6 Sharps or 6 Flats - FIS(GES)+/DIS(ES)-
+7: 7 Sharps or 5 Flats - DES+/BES-
+8: 4 Flats - AS+/F-
+9: 3 Flats - ES+/C-
+10: 2 Flats - BES+/G-
+11: 1 Flat - F+/D-
+
+Wrong option choosen, setting no signature by default
+Step3: Is Key signature chosen?
+	No signature choosen, trying to assign scale by first +/- chord
+	Current beat: 		Beat - m:1 o:1 ois:1
+
+	Found C# MAJOR_TRIAD
+	Found C# MAJOR_TRIAD
+	 Setting scale C# DUR to beat: 		Beat - m:1 o:2 ois:2
+
+	Assigned scale: C# DUR
+	Going to step 21
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:1 o:1 ois:1
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Setting scale C# DUR to beat: 		Beat - m:1 o:1 ois:1
+
+	 Setting scale C# DUR to beat: 		Beat - m:1 o:2 ois:2
+
+	 Setting scale C# DUR to beat: 		Beat - m:1 o:3 ois:3
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:1 o:2 ois:2
+	 Setting scale C# DUR to beat: 		Beat - m:2 o:1 ois:4
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:1 o:3 ois:3
+	 Setting scale C# DUR to beat: 		Beat - m:2 o:2 ois:5
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:2 o:1 ois:4
+	 Setting scale C# DUR to beat: 		Beat - m:2 o:3 ois:6
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:2 o:2 ois:5
+	 Setting scale C# DUR to beat: 		Beat - m:3 o:1 ois:7
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:2 o:3 ois:6
+	 Setting scale C# DUR to beat: 		Beat - m:3 o:2 ois:8
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:3 o:1 ois:7
+	 Setting scale C# DUR to beat: 		Beat - m:3 o:3 ois:9
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:3 o:2 ois:8
+	 Setting scale C# DUR to beat: 		Beat - m:4 o:1 ois:10
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:3 o:3 ois:9
+	 Setting scale C# DUR to beat: 		Beat - m:4 o:2 ois:11
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:4 o:1 ois:10
+	 Setting scale C# DUR to beat: 		Beat - m:4 o:3 ois:12
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:4 o:2 ois:11
+	 Setting scale C# DUR to beat: 		Beat - m:5 o:1 ois:13
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:4 o:3 ois:12
+	 Setting scale C# DUR to beat: 		Beat - m:5 o:2 ois:14
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:5 o:1 ois:13
+	 Setting scale C# DUR to beat: 		Beat - m:5 o:3 ois:15
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:5 o:2 ois:14
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:6 o:1 ois:16
+
+	Tone in question is: D
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+Step17: Finding 7 chord tones in current beat
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+Step17: Finding 7 chord tones in current beat
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+In Beat #24 to #30 is D# DUR
+	 Setting scale D# DUR to beat: 		Beat - m:9 o:1 ois:25
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:8 o:3 ois:24
+	 Setting scale D# DUR to beat: 		Beat - m:9 o:2 ois:26
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:9 o:1 ois:25
+	 Setting scale D# DUR to beat: 		Beat - m:9 o:3 ois:27
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:9 o:2 ois:26
+	 Setting scale D# DUR to beat: 		Beat - m:10 o:1 ois:28
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:9 o:3 ois:27
+	 Setting scale D# DUR to beat: 		Beat - m:10 o:2 ois:29
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:10 o:1 ois:28
+	 Setting scale D# DUR to beat: 		Beat - m:10 o:3 ois:30
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:10 o:2 ois:29
+	 Setting scale D# DUR to beat: 		Beat - m:11 o:1 ois:31
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:10 o:3 ois:30
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:11 o:2 ois:32
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Setting scale D# DUR to beat: 		Beat - m:11 o:2 ois:32
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:11 o:1 ois:31
+	 Setting scale D# DUR to beat: 		Beat - m:11 o:3 ois:33
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:11 o:2 ois:32
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:12 o:1 ois:34
+
+	Tone in question is: F#
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is D7, going to step 9
+Step9: Determine key for D7 or D7 incomplete
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:13 o:1 ois:37
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:13 o:1 ois:37
+
+	Tone in question is: C
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is +
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is +
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is +
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+In Beat #43 to #48 is A# DUR
+	 Setting scale A# DUR to beat: 		Beat - m:15 o:2 ois:44
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:15 o:1 ois:43
+	 Setting scale A# DUR to beat: 		Beat - m:15 o:3 ois:45
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:15 o:2 ois:44
+	 Setting scale A# DUR to beat: 		Beat - m:16 o:1 ois:46
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:15 o:3 ois:45
+	 Setting scale A# DUR to beat: 		Beat - m:16 o:2 ois:47
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:16 o:1 ois:46
+	 Setting scale A# DUR to beat: 		Beat - m:16 o:3 ois:48
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:16 o:2 ois:47
+	 Setting scale A# DUR to beat: 		Beat - m:17 o:1 ois:49
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:16 o:3 ois:48
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:17 o:2 ois:50
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Setting scale A# DUR to beat: 		Beat - m:17 o:2 ois:50
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:17 o:1 ois:49
+	 Setting scale A# DUR to beat: 		Beat - m:17 o:3 ois:51
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:17 o:2 ois:50
+	 Setting scale A# DUR to beat: 		Beat - m:18 o:1 ois:52
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:17 o:3 ois:51
+	 Setting scale A# DUR to beat: 		Beat - m:18 o:2 ois:53
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:18 o:1 ois:52
+	 Setting scale A# DUR to beat: 		Beat - m:18 o:3 ois:54
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:18 o:2 ois:53
+	 Setting scale A# DUR to beat: 		Beat - m:19 o:1 ois:55
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:18 o:3 ois:54
+	 Setting scale A# DUR to beat: 		Beat - m:19 o:2 ois:56
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:19 o:1 ois:55
+	 Setting scale A# DUR to beat: 		Beat - m:19 o:3 ois:57
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:19 o:2 ois:56
+	 Setting scale A# DUR to beat: 		Beat - m:20 o:1 ois:58
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:19 o:3 ois:57
+	 Setting scale A# DUR to beat: 		Beat - m:20 o:2 ois:59
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:20 o:1 ois:58
+	 Setting scale A# DUR to beat: 		Beat - m:20 o:3 ois:60
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:20 o:2 ois:59
+	 Setting scale A# DUR to beat: 		Beat - m:21 o:1 ois:61
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:20 o:3 ois:60
+	 Setting scale A# DUR to beat: 		Beat - m:21 o:2 ois:62
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:21 o:1 ois:61
+	 Setting scale A# DUR to beat: 		Beat - m:21 o:3 ois:63
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:21 o:2 ois:62
+	 Setting scale A# DUR to beat: 		Beat - m:22 o:1 ois:64
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:21 o:3 ois:63
+	 Setting scale A# DUR to beat: 		Beat - m:22 o:2 ois:65
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:22 o:1 ois:64
+	 Setting scale A# DUR to beat: 		Beat - m:22 o:3 ois:66
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:22 o:2 ois:65
+	 Setting scale A# DUR to beat: 		Beat - m:23 o:1 ois:67
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:22 o:3 ois:66
+	 Setting scale A# DUR to beat: 		Beat - m:23 o:2 ois:68
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:23 o:1 ois:67
+	 Setting scale A# DUR to beat: 		Beat - m:23 o:3 ois:69
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:23 o:2 ois:68
+	 Setting scale A# DUR to beat: 		Beat - m:24 o:1 ois:70
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:23 o:3 ois:69
+	 Setting scale A# DUR to beat: 		Beat - m:24 o:2 ois:71
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:24 o:1 ois:70
+	 Setting scale A# DUR to beat: 		Beat - m:24 o:3 ois:72
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:24 o:2 ois:71
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:25 o:1 ois:73
+
+	Tone in question is: C#
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+In Beat #73 to #74 is F# DUR
+	 Setting scale F# DUR to beat: 		Beat - m:25 o:2 ois:74
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:25 o:1 ois:73
+				Same scale F# DUR on previous beat: 		Beat - m:25 o:1 ois:73
+
+			Try to set to beat: 		Beat - m:24 o:3 ois:72
+	 Setting scale F# DUR to beat: 		Beat - m:25 o:3 ois:75
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:25 o:2 ois:74
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:26 o:1 ois:76
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:26 o:1 ois:76
+
+	Tone in question is: G
+Tone G in #75is unimportant and doesn't change the scale
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:26 o:2 ois:77
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:26 o:2 ois:77
+
+	Tone in question is: G
+Tone G in #76is unimportant and doesn't change the scale
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:26 o:3 ois:78
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Setting scale F# DUR to beat: 		Beat - m:26 o:3 ois:78
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:26 o:2 ois:77
+				Same scale F# DUR on previous beat: 		Beat - m:26 o:2 ois:77
+
+			Try to set to beat: 		Beat - m:26 o:1 ois:76
+				Same scale F# DUR on previous beat: 		Beat - m:26 o:1 ois:76
+
+			Try to set to beat: 		Beat - m:25 o:3 ois:75
+	 Setting scale F# DUR to beat: 		Beat - m:27 o:1 ois:79
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:26 o:3 ois:78
+	 Setting scale F# DUR to beat: 		Beat - m:27 o:2 ois:80
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:27 o:1 ois:79
+	 Setting scale F# DUR to beat: 		Beat - m:27 o:3 ois:81
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:27 o:2 ois:80
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:28 o:1 ois:82
+
+	Tone in question is: G
+Tone G in #81is unimportant and doesn't change the scale
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:28 o:2 ois:83
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:28 o:2 ois:83
+
+	Tone in question is: G
+Tone G in #82is unimportant and doesn't change the scale
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:28 o:3 ois:84
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Setting scale F# DUR to beat: 		Beat - m:28 o:3 ois:84
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:28 o:2 ois:83
+				Same scale F# DUR on previous beat: 		Beat - m:28 o:2 ois:83
+
+			Try to set to beat: 		Beat - m:28 o:1 ois:82
+				Same scale F# DUR on previous beat: 		Beat - m:28 o:1 ois:82
+
+			Try to set to beat: 		Beat - m:27 o:3 ois:81
+	 Setting scale F# DUR to beat: 		Beat - m:29 o:1 ois:85
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:28 o:3 ois:84
+	 Setting scale F# DUR to beat: 		Beat - m:29 o:2 ois:86
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:29 o:1 ois:85
+	 Setting scale F# DUR to beat: 		Beat - m:29 o:3 ois:87
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:29 o:2 ois:86
+	 Setting scale F# DUR to beat: 		Beat - m:30 o:1 ois:88
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:29 o:3 ois:87
+	 Setting scale F# DUR to beat: 		Beat - m:30 o:2 ois:89
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:30 o:1 ois:88
+	 Setting scale F# DUR to beat: 		Beat - m:30 o:3 ois:90
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:30 o:2 ois:89
+	 Setting scale F# DUR to beat: 		Beat - m:31 o:1 ois:91
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:30 o:3 ois:90
+	 Setting scale F# DUR to beat: 		Beat - m:31 o:2 ois:92
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:31 o:1 ois:91
+	 Setting scale F# DUR to beat: 		Beat - m:31 o:3 ois:93
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:31 o:2 ois:92
+	 Setting scale F# DUR to beat: 		Beat - m:32 o:1 ois:94
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:31 o:3 ois:93
+	 Setting scale F# DUR to beat: 		Beat - m:32 o:2 ois:95
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:32 o:1 ois:94
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:32 o:3 ois:96
+
+	Tone in question is: G
+Tone G in #95is unimportant and doesn't change the scale
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:33 o:1 ois:97
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:33 o:1 ois:97
+
+	Tone in question is: C
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+	Is D7, going to step 9
+Step9: Determine key for D7 or D7 incomplete
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:33 o:2 ois:98
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:33 o:2 ois:98
+
+	Tone in question is: C
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+	Is +
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is +
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is D7, going to step 9
+Step9: Determine key for D7 or D7 incomplete
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:34 o:3 ois:102
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:34 o:3 ois:102
+
+	Tone in question is: C
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is D7, going to step 9
+Step9: Determine key for D7 or D7 incomplete
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:35 o:3 ois:105
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:35 o:3 ois:105
+
+	Tone in question is: C#
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is D7, going to step 9
+Step9: Determine key for D7 or D7 incomplete
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:36 o:3 ois:108
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:36 o:3 ois:108
+
+	Tone in question is: C
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+	Is +
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+In Beat #108 to #120 is C# DUR
+	 Setting scale C# DUR to beat: 		Beat - m:37 o:1 ois:109
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:36 o:3 ois:108
+				Same scale C# DUR on previous beat: 		Beat - m:36 o:3 ois:108
+
+			Try to set to beat: 		Beat - m:36 o:2 ois:107
+	 Setting scale C# DUR to beat: 		Beat - m:37 o:2 ois:110
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:37 o:1 ois:109
+	 Setting scale C# DUR to beat: 		Beat - m:37 o:3 ois:111
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:37 o:2 ois:110
+	 Setting scale C# DUR to beat: 		Beat - m:38 o:1 ois:112
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:37 o:3 ois:111
+	 Setting scale C# DUR to beat: 		Beat - m:38 o:2 ois:113
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:38 o:1 ois:112
+	 Setting scale C# DUR to beat: 		Beat - m:38 o:3 ois:114
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:38 o:2 ois:113
+	 Setting scale C# DUR to beat: 		Beat - m:39 o:1 ois:115
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:38 o:3 ois:114
+	 Setting scale C# DUR to beat: 		Beat - m:39 o:2 ois:116
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:39 o:1 ois:115
+	 Setting scale C# DUR to beat: 		Beat - m:39 o:3 ois:117
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:39 o:2 ois:116
+	 Setting scale C# DUR to beat: 		Beat - m:40 o:1 ois:118
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:39 o:3 ois:117
+	 Setting scale C# DUR to beat: 		Beat - m:40 o:2 ois:119
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:40 o:1 ois:118
+	 Setting scale C# DUR to beat: 		Beat - m:40 o:3 ois:120
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:40 o:2 ois:119
+	 Setting scale C# DUR to beat: 		Beat - m:41 o:1 ois:121
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:40 o:3 ois:120
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:41 o:2 ois:122
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:41 o:2 ois:122
+
+	Tone in question is: A
+Tone A in #121is unimportant and doesn't change the scale
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:41 o:3 ois:123
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:41 o:3 ois:123
+
+	Tone in question is: A
+Tone A in #122is unimportant and doesn't change the scale
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:42 o:1 ois:124
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Setting scale C# DUR to beat: 		Beat - m:42 o:1 ois:124
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:41 o:3 ois:123
+				Same scale C# DUR on previous beat: 		Beat - m:41 o:3 ois:123
+
+			Try to set to beat: 		Beat - m:41 o:2 ois:122
+				Same scale C# DUR on previous beat: 		Beat - m:41 o:2 ois:122
+
+			Try to set to beat: 		Beat - m:41 o:1 ois:121
+	 Setting scale C# DUR to beat: 		Beat - m:42 o:2 ois:125
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:42 o:1 ois:124
+	 Setting scale C# DUR to beat: 		Beat - m:42 o:3 ois:126
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:42 o:2 ois:125
+	 Setting scale C# DUR to beat: 		Beat - m:43 o:1 ois:127
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:42 o:3 ois:126
+	 Setting scale C# DUR to beat: 		Beat - m:43 o:2 ois:128
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:43 o:1 ois:127
+	 Setting scale C# DUR to beat: 		Beat - m:43 o:3 ois:129
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:43 o:2 ois:128
+	 Setting scale C# DUR to beat: 		Beat - m:44 o:1 ois:130
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:43 o:3 ois:129
+	 Setting scale C# DUR to beat: 		Beat - m:44 o:2 ois:131
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:44 o:1 ois:130
+	 Setting scale C# DUR to beat: 		Beat - m:44 o:3 ois:132
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:44 o:2 ois:131
+	 Setting scale C# DUR to beat: 		Beat - m:45 o:1 ois:133
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:44 o:3 ois:132
+	 Setting scale C# DUR to beat: 		Beat - m:45 o:2 ois:134
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:45 o:1 ois:133
+	 Setting scale C# DUR to beat: 		Beat - m:45 o:3 ois:135
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:45 o:2 ois:134
+	 Setting scale C# DUR to beat: 		Beat - m:46 o:1 ois:136
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:45 o:3 ois:135
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:46 o:2 ois:137
+
+	Tone in question is: B
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+In Beat #137 to #138 is F# DUR
+	 Setting scale F# DUR to beat: 		Beat - m:46 o:3 ois:138
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:46 o:2 ois:137
+				Same scale F# DUR on previous beat: 		Beat - m:46 o:2 ois:137
+
+			Try to set to beat: 		Beat - m:46 o:1 ois:136
+	 Setting scale F# DUR to beat: 		Beat - m:47 o:1 ois:139
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:46 o:3 ois:138
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:47 o:2 ois:140
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Setting scale F# DUR to beat: 		Beat - m:47 o:2 ois:140
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:47 o:1 ois:139
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:47 o:3 ois:141
+
+	Tone in question is: C
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+In Beat #141 to #142 is C# DUR
+	 Setting scale C# DUR to beat: 		Beat - m:48 o:1 ois:142
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:47 o:3 ois:141
+				Same scale C# DUR on previous beat: 		Beat - m:47 o:3 ois:141
+
+			Try to set to beat: 		Beat - m:47 o:2 ois:140
+	 Setting scale C# DUR to beat: 		Beat - m:48 o:2 ois:143
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:48 o:1 ois:142
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:48 o:3 ois:144
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Setting scale C# DUR to beat: 		Beat - m:48 o:3 ois:144
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:48 o:2 ois:143
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:49 o:1 ois:145
+
+	Tone in question is: D
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+	Is D7, going to step 9
+Step9: Determine key for D7 or D7 incomplete
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:49 o:2 ois:146
+
+Step22: Determine whether this tone changes the scale
+Current beat is: 		Beat - m:49 o:2 ois:146
+
+	Tone in question is: D
+Step23: Mark beat with changing tone as section start and go to step26
+Step26: We ask for know chords
+Step18: Get 7 any tones from section start
+Step19: Try to find the scale type dur/mol/chrom
+Step26: We ask for know chords
+	Is -
+Step17: Finding 7 chord tones in current beat
+Step19: Try to find the scale type dur/mol/chrom
+In Beat #147 to #150 is C# DUR
+	 Setting scale C# DUR to beat: 		Beat - m:50 o:1 ois:148
+
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:49 o:3 ois:147
+	 Setting scale C# DUR to beat: 		Beat - m:50 o:2 ois:149
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:50 o:1 ois:148
+	 Setting scale C# DUR to beat: 		Beat - m:50 o:3 ois:150
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:50 o:2 ois:149
+	 Setting scale C# DUR to beat: 		Beat - m:51 o:1 ois:151
+
+Song@ac4d3b
+Song@ac4d3b
+		Try to set the scale to previous beats, if they have all chord tones in
+			Try to set to beat: 		Beat - m:50 o:3 ois:150
+Step21: Search next tones to find one that is not part of last found scale
+Current beat: 		Beat - m:51 o:2 ois:152
+
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+	 Same scale as on previous beat?! - to be confirmed
+No tone to change scale - the same until end
+Step28: Verification - not implemented yet
+Step29: End of program
