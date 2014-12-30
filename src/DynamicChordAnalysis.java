@@ -3,8 +3,10 @@ import java.io.FileWriter;
 
 public class DynamicChordAnalysis {
 	private Song song;
+	private String midiFile;
 	
 	public DynamicChordAnalysis(String midiFile) {
+		this.midiFile = midiFile;
 		MidiReader mr = new MidiReader(midiFile, -1, 32);
 		song = mr.read();
 	}
@@ -233,7 +235,7 @@ public class DynamicChordAnalysis {
 		}
 		
 		
-		BufferedWriter bWriter = new BufferedWriter(new FileWriter("be_son1a.mid_afterMicroRemoval.txt"));
+		BufferedWriter bWriter = new BufferedWriter(new FileWriter(this.midiFile + "_analysis.txt"));
 		
 		int m=1;
 		for(Measure measure : song.measures) {
@@ -254,7 +256,12 @@ public class DynamicChordAnalysis {
 	
 	
 	public static void main(String[] args) {
-		DynamicChordAnalysis dChA = new DynamicChordAnalysis("be_son1a.mid");
+		String fileName = "be_son1a.mid";
+		if(args != null && args.length > 0) {
+			fileName = args[0];
+		}
+		
+		DynamicChordAnalysis dChA = new DynamicChordAnalysis(fileName);
 		
 		/*List<Measure> measures = dChA.song.measures;
 		

@@ -25,77 +25,6 @@ import java.util.Set;
 
 public class ScaleAnalysis {
 	
-	enum ScaleType {
-		DUR, MOL, DUR_MOL, CHROM, DUR_HARMONIC, MOL_MELODIC;
-	}
-	
-	public class Scale {
-		int midiNum;
-		ScaleType scaleType;
-		private boolean far;
-		
-		Scale(int midiNum, ScaleType scaleType) {
-			this.midiNum = midiNum % 12;
-			this.scaleType = scaleType;
-		}
-		
-		Scale(Scale scale) {
-			this.midiNum = scale.midiNum;
-			this.scaleType = scale.scaleType;
-		}
-		
-		public Integer[] getMidiTones() {
-			Integer[] intervals = null;
-			
-			switch (scaleType) {
-				case DUR:   intervals = Arrays.copyOf(KeySignature.DUR_INTERVALS, 7);	break;
-				case MOL:   intervals = Arrays.copyOf(KeySignature.MOL_INTERVALS, 7);	break;
-				case CHROM: intervals = Arrays.copyOf(KeySignature.CHROM_INTERVALS, 7); break;
-			
-			default:
-				break;
-			}
-			
-			Integer[] tones = new Integer[8];
-			tones[0] = midiNum;
-			for(int i=1; i<8; i++) {
-				tones[i] = ( (tones[i - 1] + intervals[i-1]) % 12 );
-			}
-			
-			return tones;
-		}
-		
-		public boolean isInScaleTones(int toneMidi) {
-			if(scaleType == ScaleType.DUR_MOL) {
-				return false;
-			}
-			
-			toneMidi = toneMidi % 12;
-			Integer[] scaleTones = getMidiTones();
-			for (int i = 0; i < scaleTones.length; i++) {
-				if(toneMidi == scaleTones[i]) {
-					return true;
-				}
-			}
-			
-			return false;
-		}
-
-		@Override
-		public String toString() {
-			return ChordMark.midiNumToToneString(midiNum) + " " + scaleType;
-		}
-
-		public void setFar(boolean b) {
-			this.far = true;
-		}
-		
-		public boolean getFar() {
-			return this.far;
-		}
-		
-	}
-	
 	public static PrintStream oldOut;
 	
 	Song song = null;
@@ -302,7 +231,7 @@ public class ScaleAnalysis {
 				if(isDur) {
 					scale = new Scale(nextDurMolChordBeat.chMark.getMidiNum() % 12, ScaleType.DUR);
 				} else {
-					scale = new Scale(nextDurMolChordBeat.chMark.getMidiNum() % 12, ScaleType.MOL);				
+					scale = new Scale(nextDurMolChordBeat.chMark.getMidiNum() % 12, ScaleType.MOLL);				
 				}
 	
 				// na cely usek (moze byt aj len 1. doba
@@ -422,7 +351,7 @@ public class ScaleAnalysis {
 				durOrMolScale = new Scale(firstChMark.getMidiNum(), ScaleType.DUR);
 			} else {
 				System.out.println(basicTone + " MOL");
-				durOrMolScale = new Scale(firstChMark.getMidiNum(), ScaleType.MOL);
+				durOrMolScale = new Scale(firstChMark.getMidiNum(), ScaleType.MOLL);
 			}
 			
 			chBeat.setScale(durOrMolScale, song);
@@ -483,7 +412,7 @@ public class ScaleAnalysis {
 			}			
 		} else {
 			if(nextChordMark.getMidiNum() == molKeyNum) {
-				scale = new Scale(molKeyNum,ScaleType.MOL);
+				scale = new Scale(molKeyNum,ScaleType.MOLL);
 			}
 		}
 		
@@ -503,7 +432,7 @@ public class ScaleAnalysis {
 		
 		if(nextChordMark.getChord().equals(Chord.MINOR_TRIAD)) {
 			if(nextChordMark.getMidiNum() == durMolKeyNum) {
-				scale = new Scale(durMolKeyNum,ScaleType.MOL);
+				scale = new Scale(durMolKeyNum,ScaleType.MOLL);
 			}
 		} else {
 			if(nextChordMark.getMidiNum() == durMolKeyNum) {
@@ -536,7 +465,7 @@ public class ScaleAnalysis {
 			}
 		} else {
 			if(nextChordMark.getMidiNum() == majKeyNum) {
-				scale = new Scale(durMolKeyNum,ScaleType.MOL);
+				scale = new Scale(durMolKeyNum,ScaleType.MOLL);
 			}
 		}		
 		
@@ -576,7 +505,7 @@ public class ScaleAnalysis {
 		// inak prirad dur_mol
 		if(scale == null) {
 			int durMolKey = (d7Mark.getMidiNum() - 7 + 12) % 12;
-			scale = new Scale(durMolKey, ScaleType.DUR_MOL);
+			scale = new Scale(durMolKey, ScaleType.DUR_MOLL);
 			
 			chBeat.setScale(scale, song);
 			
@@ -672,7 +601,7 @@ public class ScaleAnalysis {
 						}
 					} // ak obsahuje zakladny ton molovy a k nemu malu terciu
 					else if(nextChordTones.contains(molKeyNum) && nextChordTones.contains((molKeyNum + 3) % 12)) {
-						scale = new Scale(molKeyNum, ScaleType.MOL);
+						scale = new Scale(molKeyNum, ScaleType.MOLL);
 						for (int i = chBeat.orderInSong; i <= nextChordBeat.calBeat.orderInSong; i++) {
 							song.beats.get(i).setScale(scale, song);
 						}
@@ -704,20 +633,20 @@ public class ScaleAnalysis {
 				scale = new Scale(durKeyNum, ScaleType.DUR);
 				System.out.println("\tDUR found from key pair");
 			} else if(keyPair.secondMidiNum == molKeyNum) {
-				scale = new Scale(durKeyNum, ScaleType.MOL);
+				scale = new Scale(durKeyNum, ScaleType.MOLL);
 				System.out.println("\tMOL found from key pair");
 			} else {
-				scale = new Scale(durKeyNum, ScaleType.DUR_MOL);
+				scale = new Scale(durKeyNum, ScaleType.DUR_MOLL);
 				System.out.println("\tNot confirmed from key pair");
 			}
 		} else {
-			scale = new Scale(durKeyNum, ScaleType.DUR_MOL);
+			scale = new Scale(durKeyNum, ScaleType.DUR_MOLL);
 		}
 		
 		chBeat.setScale(scale, song);
 		
 		// Ak sme urcili dur alebo mol treba ist na hladanie meniaceho tonu
-		if((scale.scaleType == ScaleType.DUR) || (scale.scaleType == ScaleType.MOL)) {
+		if((scale.scaleType == ScaleType.DUR) || (scale.scaleType == ScaleType.MOLL)) {
 			step21(scale);
 			return;
 		} else {
@@ -762,14 +691,14 @@ public class ScaleAnalysis {
 				scale = new Scale(durMolKeyNum, ScaleType.DUR);
 				System.out.println("\tDUR found from key pair");
 			} else if(keyPair.secondMidiNum == durMolKeyNum) {
-				scale = new Scale(durMolKeyNum, ScaleType.MOL);
+				scale = new Scale(durMolKeyNum, ScaleType.MOLL);
 				System.out.println("\tMOL found from key pair");
 			} else {
-				scale = new Scale(durMolKeyNum, ScaleType.DUR_MOL);
+				scale = new Scale(durMolKeyNum, ScaleType.DUR_MOLL);
 				System.out.println("\tNot confirmed from key pair");
 			}
 		} else {
-			scale = new Scale(durMolKeyNum, ScaleType.DUR_MOL);
+			scale = new Scale(durMolKeyNum, ScaleType.DUR_MOLL);
 			
 			// TODO tiez algoritmus ako pri klamnom zavere?		
 			// TODO co ak nastavime dur aj mol ???
@@ -781,7 +710,7 @@ public class ScaleAnalysis {
 		dm7Beat.setScale(scale, song);		
 
 		// Ak sme urcili dur alebo mol treba ist na hladanie meniaceho tonu
-		if(scale.scaleType.equals(ScaleType.DUR) || scale.scaleType.equals(ScaleType.MOL)) {
+		if(scale.scaleType.equals(ScaleType.DUR) || scale.scaleType.equals(ScaleType.MOLL)) {
 			step21(scale);
 			return;
 		}
@@ -892,7 +821,7 @@ public class ScaleAnalysis {
 				if(nextChMark.getChord().equals(Chord.MAJOR_TRIAD)) {
 					scale = new Scale(incrementedTone, ScaleType.DUR);
 				} else if(nextChMark.getChord().equals(Chord.MINOR_TRIAD)) {
-					scale = new Scale(incrementedTone, ScaleType.MOL);
+					scale = new Scale(incrementedTone, ScaleType.MOLL);
 				}
 				
 				dim7Beat.chordMark.setMidiNum(basicTone);
@@ -956,7 +885,7 @@ public class ScaleAnalysis {
 			if(numIncremented == 1) {
 				System.out.println("\t1 tone incremeted, dim7 basic tone is " + MidiReader.NOTE_NAMES[((incrementedTones[0] - 1 + 12) % 12)] );
 				
-				ScaleType scaleType = nextChMark.getChord().equalsToOneOf(Chord.MAJOR_TRIAD) ? ScaleType.DUR : ScaleType.MOL;
+				ScaleType scaleType = nextChMark.getChord().equalsToOneOf(Chord.MAJOR_TRIAD) ? ScaleType.DUR : ScaleType.MOLL;
 				Scale scale = new Scale(incrementedTones[0] % 12, scaleType); 
 				
 				System.out.println("Scale: " + scale);
@@ -982,7 +911,7 @@ public class ScaleAnalysis {
 				
 				if(incTonesDistance == 3) {
 					System.out.println("2 MAJ MIN tones incremented, distance is 3");
-					ScaleType scaleType = nextChMark.getChord().equalsToOneOf(Chord.MAJOR_TRIAD) ? ScaleType.DUR : ScaleType.MOL;
+					ScaleType scaleType = nextChMark.getChord().equalsToOneOf(Chord.MAJOR_TRIAD) ? ScaleType.DUR : ScaleType.MOLL;
 					int basicScaleTone = Math.min((incrementedTones[0] + 1) % 12, (incrementedTones[1] + 1) % 12);
 					Scale scale = new Scale(basicScaleTone, scaleType); 
 					
@@ -1008,7 +937,7 @@ public class ScaleAnalysis {
 					}
 				} else if(incTonesDistance == 9) {
 					System.out.println("2 MAJ MIN tones incremented, distance is 9");
-					ScaleType scaleType = nextChMark.getChord().equalsToOneOf(Chord.MAJOR_TRIAD) ? ScaleType.DUR : ScaleType.MOL;
+					ScaleType scaleType = nextChMark.getChord().equalsToOneOf(Chord.MAJOR_TRIAD) ? ScaleType.DUR : ScaleType.MOLL;
 					int basicScaleTone = Math.max((incrementedTones[0] + 1) % 12, (incrementedTones[1] + 1) % 12);
 					Scale scale = new Scale(basicScaleTone, scaleType); 
 					
@@ -1170,7 +1099,7 @@ public class ScaleAnalysis {
 						scaleType = ScaleType.DUR;
 						break;
 					default:
-						scaleType = ScaleType.MOL;
+						scaleType = ScaleType.MOLL;
 						break;
 					}
 
@@ -1219,7 +1148,7 @@ public class ScaleAnalysis {
 					// zakladny ton je o 2 nizsie ako zakladny ton Dm7?
 					int scaleMidiNum = (dim7Tone + 12 - 2) % 12;
 					// aky je typ toniny? DUR_MOL?
-					Scale scale = new Scale(scaleMidiNum, ScaleType.DUR_MOL);
+					Scale scale = new Scale(scaleMidiNum, ScaleType.DUR_MOLL);
 					
 					// TODO pri spatnom prehladavani, treba pozerat aj na DUR_MOL a na toninove
 					
@@ -1263,7 +1192,7 @@ public class ScaleAnalysis {
 				// ak nenajdeme dur ale dalsi akord obsahuj o 9 zvyseny ton potom
 				int scaleMidiNum = (nextChMark.getMidiNum() - 3 + 12) % 12;
 				// a nastavime mol
-				scale = new Scale(scaleMidiNum, ScaleType.MOL);
+				scale = new Scale(scaleMidiNum, ScaleType.MOLL);
 			}
 			
 			// TODO toto urcovanie Aug7 teba urobit vseobecne a pridat do bodov 6 aj 26
@@ -1336,7 +1265,7 @@ public class ScaleAnalysis {
 	private ScaleType competeScales(Beat startBeat, final int basicTone) {
 
 		final Integer[] DUR_INT = Arrays.copyOf(KeySignature.DUR_INTERVALS, 7);
-		final Integer[] MOL_INT = Arrays.copyOf(KeySignature.MOL_INTERVALS, 7);
+		final Integer[] MOL_INT = Arrays.copyOf(KeySignature.MOLL_INTERVALS, 7);
 		
 		Beat nextBeat = startBeat;
 		final Set<Integer> chordTones = new HashSet<Integer>();
@@ -1347,7 +1276,7 @@ public class ScaleAnalysis {
 			
 			public ScaleTypeReturner() {
 				durMidiTones = new Scale(basicTone, ScaleType.DUR).getMidiTones();
-				molMidiTones = new Scale(basicTone, ScaleType.MOL).getMidiTones();
+				molMidiTones = new Scale(basicTone, ScaleType.MOLL).getMidiTones();
 			}
 			
 			public ScaleType getScaleType() {
@@ -1364,13 +1293,13 @@ public class ScaleAnalysis {
 				if( (scaleCode > 0) && (scaleCode < 3) ) {
 					switch (scaleCode) {
 						case 1: return ScaleType.DUR;
-						case 2: return ScaleType.MOL;
+						case 2: return ScaleType.MOLL;
 					}
 				}	
 				
 				if(scaleCode == 3) {
 					// TODO co ak obe skoncili na rovnakej dobe? Vratit DUR_MOL?
-					return ScaleType.DUR_MOL;
+					return ScaleType.DUR_MOLL;
 				} else {
 					return null;
 				}
@@ -1383,7 +1312,7 @@ public class ScaleAnalysis {
 			}
 			
 			Integer[] durMidiTones = new Scale(basicTone, ScaleType.DUR).getMidiTones();
-			Integer[] molMidiTones = new Scale(basicTone, ScaleType.MOL).getMidiTones();
+			Integer[] molMidiTones = new Scale(basicTone, ScaleType.MOLL).getMidiTones();
 			
 			
 			ScaleType scaleTypeInBeat = new ScaleTypeReturner().getScaleType();
@@ -1508,7 +1437,7 @@ public class ScaleAnalysis {
 			scaleType = ScaleType.DUR;
 		} else {
 			System.out.println(toneName + "MOL");
-			scaleType = ScaleType.MOL;
+			scaleType = ScaleType.MOLL;
 		}
 		
 		Scale scale = new Scale(durMolChMark.getMidiNum(), scaleType);
@@ -1713,7 +1642,7 @@ public class ScaleAnalysis {
 		System.out.println("Step19: Try to find the scale type dur/mol/chrom");
 
 		final Integer[] DUR_INT = Arrays.copyOf(KeySignature.DUR_INTERVALS, 7);
-		final Integer[] MOL_INT = Arrays.copyOf(KeySignature.MOL_INTERVALS, 7);
+		final Integer[] MOL_INT = Arrays.copyOf(KeySignature.MOLL_INTERVALS, 7);
 		final Integer[] CHROM_INT = Arrays.copyOf(KeySignature.CHROM_INTERVALS, 7);
 		
 		// kontrola
@@ -1742,7 +1671,7 @@ public class ScaleAnalysis {
 			int scaleMidi = getChordTonesFirstTone(chordTones, MOL_INT);
 			System.out.println("In Beat #" + sectionStart.toShortString() + " to #" + song.beats.get(lastBeat).toShortString() +
 					" is " + MidiReader.NOTE_NAMES[scaleMidi] + " MOL");
-			Scale scale = new Scale(scaleMidi, ScaleType.MOL);
+			Scale scale = new Scale(scaleMidi, ScaleType.MOLL);
 			
 			for(int i=sectionStart.orderInSong; i<=lastBeat; i++ ) {
 				Beat beatInInterval = song.beats.get(i);

@@ -216,7 +216,7 @@ class Beat {
 	int measure;
 	int orderInMeasure;
 	int orderInSong;
-	ScaleAnalysis.Scale[] scales = new ScaleAnalysis.Scale[2];
+	Scale[] scales = new Scale[2];
 	static Song song;
 	
 	ChordMark chordMark = null;
@@ -224,7 +224,7 @@ class Beat {
 	List<RawNote> notes = new LinkedList<RawNote>();
 	//Map<Integer, Double> toneMap = new HashMap<Integer, Double>();
 	
-	public ScaleAnalysis.Scale getScale() {
+	public Scale getScale() {
 		return scales[0];
 	}
 	
@@ -344,8 +344,8 @@ class Beat {
 		return null;
 	}
 	
-	public ScaleAnalysis.Scale getPreviousScale() {
-		ScaleAnalysis.Scale previousScale = null;
+	public Scale getPreviousScale() {
+		Scale previousScale = null;
 		
 		Beat previousBeat = getPreviousBeat();
 		while( (previousBeat != null) && (previousBeat.scales[0] == null) ) {
@@ -359,10 +359,10 @@ class Beat {
 		return previousScale;
 	}
 	
-	public boolean isFarScale(ScaleAnalysis.Scale scale) {
-		ScaleAnalysis.Scale previousScale = getPreviousScale();
+	public boolean isFarScale(Scale scale) {
+		Scale previousScale = getPreviousScale();
 		
-		if(scale.scaleType == ScaleAnalysis.ScaleType.DUR_MOL || previousScale.scaleType == ScaleAnalysis.ScaleType.DUR_MOL) {
+		if(scale.scaleType == ScaleType.DUR_MOLL || previousScale.scaleType == ScaleType.DUR_MOLL) {
 			return false;
 		}
 		
@@ -385,14 +385,14 @@ class Beat {
 	// TODO Ak pri priradovani toniny naspat pozerame vsetky tony, tj. nie je akord, nemusime sa zastavit, zastavime sa az na takej dobe, kde je akord a zaroven nejaky akordicky ton nepatri do toniny
 	// potom ani doba, ktoru sme preskocili nepatri do toniny
 	// ak sme preskocili nejaku dobu, kde sme nasli neakordicky ton, ktory nepatri do toniny ale po preskoceni sme nasli dobu s akordom, kde vsetky tony patria do toniny potom prehlasime cely usek za taku toninu a pokracujeme v hladani dalej, tj. ak na dobe s akordom nebol urcena tonina
-	public void setScale(ScaleAnalysis.Scale scale, Song song) {
+	public void setScale(Scale scale, Song song) {
 		
 		this.scales[0] = scale;
 		
 		System.out.println("MidiReader.setScale: \t Setting scale " + scale +  " to beat: " + this.toShortString());
 		
 		// nie je tonina prilis vzdialena
-		ScaleAnalysis.Scale previousScale = getPreviousScale();
+		Scale previousScale = getPreviousScale();
 		
 			
 		if(previousScale == null || scale == null) {
@@ -405,7 +405,7 @@ class Beat {
 		}
 		
 		
-		if(scale.scaleType.equals(ScaleAnalysis.ScaleType.DUR_MOL)) {
+		if(scale.scaleType.equals(ScaleType.DUR_MOLL)) {
 			return;
 		}
 		
